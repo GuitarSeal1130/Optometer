@@ -1,0 +1,371 @@
+Analysis & Synthesis report for Optometer
+Tue Nov 07 20:09:47 2017
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. User-Specified and Inferred Latches
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Inverted Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                               ;
++-----------------------------+----------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Tue Nov 07 20:09:47 2017        ;
+; Quartus II Version          ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
+; Revision Name               ; Optometer                                    ;
+; Top-level Entity Name       ; Optometer                                    ;
+; Family                      ; MAX II                                       ;
+; Total logic elements        ; 674                                          ;
+; Total pins                  ; 55                                           ;
+; Total virtual pins          ; 0                                            ;
+; UFM blocks                  ; 0 / 1 ( 0 % )                                ;
++-----------------------------+----------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                          ;
++--------------------------------------------------------------+--------------------+--------------------+
+; Option                                                       ; Setting            ; Default Value      ;
++--------------------------------------------------------------+--------------------+--------------------+
+; Device                                                       ; EPM1270T144C5      ;                    ;
+; Top-level entity name                                        ; Optometer          ; Optometer          ;
+; Family name                                                  ; MAX II             ; Stratix II         ;
+; Use Generated Physical Constraints File                      ; Off                ;                    ;
+; Use smart compilation                                        ; Off                ; Off                ;
+; Restructure Multiplexers                                     ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                          ; Off                ; Off                ;
+; Preserve fewer node names                                    ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                    ; Off                ; Off                ;
+; Verilog Version                                              ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                 ; VHDL93             ; VHDL93             ;
+; State Machine Processing                                     ; Auto               ; Auto               ;
+; Safe State Machine                                           ; Off                ; Off                ;
+; Extract Verilog State Machines                               ; On                 ; On                 ;
+; Extract VHDL State Machines                                  ; On                 ; On                 ;
+; Ignore Verilog initial constructs                            ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                   ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops               ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                      ; On                 ; On                 ;
+; Parallel Synthesis                                           ; Off                ; Off                ;
+; NOT Gate Push-Back                                           ; On                 ; On                 ;
+; Power-Up Don't Care                                          ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                 ; Off                ; Off                ;
+; Remove Duplicate Registers                                   ; On                 ; On                 ;
+; Ignore CARRY Buffers                                         ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                       ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                    ; Off                ; Off                ;
+; Ignore LCELL Buffers                                         ; Off                ; Off                ;
+; Ignore SOFT Buffers                                          ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                               ; Off                ; Off                ;
+; Optimization Technique                                       ; Balanced           ; Balanced           ;
+; Carry Chain Length                                           ; 70                 ; 70                 ;
+; Auto Carry Chains                                            ; On                 ; On                 ;
+; Auto Open-Drain Pins                                         ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                        ; Off                ; Off                ;
+; Auto Shift Register Replacement                              ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                ; On                 ; On                 ;
+; Allow Synchronous Control Signals                            ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                       ; Off                ; Off                ;
+; Auto Resource Sharing                                        ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing          ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives            ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report           ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                           ; Off                ; Off                ;
+; Synchronization Register Chain Length                        ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                 ; Normal compilation ; Normal compilation ;
+; HDL message level                                            ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages              ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report     ; 100                ; 100                ;
+; Number of Inverted Registers Reported in Synthesis Report    ; 100                ; 100                ;
+; Clock MUX Protection                                         ; On                 ; On                 ;
+; Block Design Naming                                          ; Auto               ; Auto               ;
+; Synthesis Effort                                             ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                           ; Medium             ; Medium             ;
++--------------------------------------------------------------+--------------------+--------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                  ;
++------------------------------------------------------------------+-----------------+-----------------+------------------------------------------------------------------+
+; File Name with User-Entered Path                                 ; Used in Netlist ; File Type       ; File Name with Absolute Path                                     ;
++------------------------------------------------------------------+-----------------+-----------------+------------------------------------------------------------------+
+; //Mac/Home/Desktop/数字电路设计实验 (下)/Optometer/Optometer.vhd ; yes             ; User VHDL File  ; //Mac/Home/Desktop/数字电路设计实验 (下)/Optometer/Optometer.vhd ;
++------------------------------------------------------------------+-----------------+-----------------+------------------------------------------------------------------+
+
+
++-------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary           ;
++---------------------------------------------+---------+
+; Resource                                    ; Usage   ;
++---------------------------------------------+---------+
+; Total logic elements                        ; 674     ;
+;     -- Combinational with no register       ; 552     ;
+;     -- Register only                        ; 29      ;
+;     -- Combinational with a register        ; 93      ;
+;                                             ;         ;
+; Logic element usage by number of LUT inputs ;         ;
+;     -- 4 input functions                    ; 398     ;
+;     -- 3 input functions                    ; 131     ;
+;     -- 2 input functions                    ; 102     ;
+;     -- 1 input functions                    ; 8       ;
+;     -- 0 input functions                    ; 6       ;
+;                                             ;         ;
+; Logic elements by mode                      ;         ;
+;     -- normal mode                          ; 634     ;
+;     -- arithmetic mode                      ; 40      ;
+;     -- qfbk mode                            ; 0       ;
+;     -- register cascade mode                ; 0       ;
+;     -- synchronous clear/load mode          ; 5       ;
+;     -- asynchronous clear/load mode         ; 45      ;
+;                                             ;         ;
+; Total registers                             ; 122     ;
+; Total logic cells in carry chains           ; 42      ;
+; I/O pins                                    ; 55      ;
+; Maximum fan-out node                        ; WideOr4 ;
+; Maximum fan-out                             ; 84      ;
+; Total fan-out                               ; 2478    ;
+; Average fan-out                             ; 3.40    ;
++---------------------------------------------+---------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                  ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
+; |Optometer                 ; 674 (674)   ; 122          ; 0          ; 55   ; 0            ; 552 (552)    ; 29 (29)           ; 93 (93)          ; 42 (42)         ; 0 (0)      ; |Optometer          ; work         ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                ;
++-----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------+------------------------+
+; col_r[1]$latch                                      ; Mux37               ; yes                    ;
+; col_r[2]$latch                                      ; Mux37               ; yes                    ;
+; col_r[3]$latch                                      ; Mux37               ; yes                    ;
+; col_r[4]$latch                                      ; Mux37               ; yes                    ;
+; col_r[5]$latch                                      ; Mux37               ; yes                    ;
+; col_r[6]$latch                                      ; Mux37               ; yes                    ;
+; cat[0]$latch                                        ; Mux142              ; yes                    ;
+; cat[1]$latch                                        ; Mux142              ; yes                    ;
+; cat[2]$latch                                        ; Mux142              ; yes                    ;
+; cat[3]$latch                                        ; Mux142              ; yes                    ;
+; cat[4]$latch                                        ; Mux142              ; yes                    ;
+; cat[5]$latch                                        ; Mux142              ; yes                    ;
+; cat[6]$latch                                        ; Mux142              ; yes                    ;
+; cat[7]$latch                                        ; Mux142              ; yes                    ;
+; digit[0]$latch                                      ; Mux142              ; yes                    ;
+; digit[1]$latch                                      ; Mux142              ; yes                    ;
+; digit[2]$latch                                      ; Mux142              ; yes                    ;
+; digit[3]$latch                                      ; Mux142              ; yes                    ;
+; digit[4]$latch                                      ; Mux142              ; yes                    ;
+; digit[5]$latch                                      ; Mux142              ; yes                    ;
+; digit[6]$latch                                      ; Mux142              ; yes                    ;
+; digit[7]$latch                                      ; Mux142              ; yes                    ;
+; Number of user-specified and inferred latches = 22  ;                     ;                        ;
++-----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; kbcol[3]~reg0                         ; Stuck at VCC due to stuck port data_in ;
+; clkcnt2[0]                            ; Merged with clkcnt1[0]                 ;
+; clkcnt2[1]                            ; Merged with clkcnt1[1]                 ;
+; Total Number of Removed Registers = 3 ;                                        ;
++---------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 122   ;
+; Number of registers using Synchronous Clear  ; 5     ;
+; Number of registers using Synchronous Load   ; 3     ;
+; Number of registers using Asynchronous Clear ; 45    ;
+; Number of registers using Asynchronous Load  ; 5     ;
+; Number of registers using Clock Enable       ; 21    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; curstate.n                             ; 4       ;
+; kbcolstate[0]                          ; 16      ;
+; ran[0]                                 ; 19      ;
+; Total number of inverted registers = 3 ;         ;
++----------------------------------------+---------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Optometer|kbbuf1[0]       ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 3 LEs                ; 6 LEs                  ; Yes        ; |Optometer|kbbuf3[0]       ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |Optometer|curstate.h2     ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |Optometer|curstate.a4     ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |Optometer|curstate.b2     ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |Optometer|curstate.c2     ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; Yes        ; |Optometer|curstate.f1     ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |Optometer|curstate.g3     ;
+; 17:1               ; 3 bits    ; 33 LEs        ; 3 LEs                ; 30 LEs                 ; Yes        ; |Optometer|kbbuf2[0]       ;
+; 17:1               ; 3 bits    ; 33 LEs        ; 3 LEs                ; 30 LEs                 ; Yes        ; |Optometer|kbbuf4[0]       ;
+; 24:1               ; 2 bits    ; 32 LEs        ; 4 LEs                ; 28 LEs                 ; Yes        ; |Optometer|ans[0]          ;
+; 25:1               ; 6 bits    ; 96 LEs        ; 18 LEs               ; 78 LEs                 ; Yes        ; |Optometer|cnfrm           ;
+; 43:1               ; 5 bits    ; 140 LEs       ; 5 LEs                ; 135 LEs                ; No         ; |Optometer|Mux97           ;
+; 46:1               ; 5 bits    ; 150 LEs       ; 5 LEs                ; 145 LEs                ; No         ; |Optometer|Mux133          ;
+; 14:1               ; 2 bits    ; 18 LEs        ; 2 LEs                ; 16 LEs                 ; No         ; |Optometer|Mux103          ;
+; 13:1               ; 2 bits    ; 16 LEs        ; 2 LEs                ; 14 LEs                 ; No         ; |Optometer|Mux128          ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 12 LEs               ; 3 LEs                  ; No         ; |Optometer|Mux41           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+    Info: Processing started: Tue Nov 07 20:09:42 2017
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Optometer -c Optometer
+Info: Found 2 design units, including 1 entities, in source file //Mac/Home/Desktop/数字电路设计实验 (下)/Optometer/Optometer.vhd
+    Info: Found design unit 1: Optometer-a
+    Info: Found entity 1: Optometer
+Info: Elaborating entity "Optometer" for the top level hierarchy
+Warning (10492): VHDL Process Statement warning at Optometer.vhd(628): signal "curstate" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at Optometer.vhd(644): inferring latch(es) for signal or variable "cat", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Optometer.vhd(644): inferring latch(es) for signal or variable "digit", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Optometer.vhd(644): inferring latch(es) for signal or variable "col_r", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "col_r[0]" at Optometer.vhd(644)
+Info (10041): Inferred latch for "col_r[1]" at Optometer.vhd(644)
+Info (10041): Inferred latch for "col_r[2]" at Optometer.vhd(644)
+Info (10041): Inferred latch for "col_r[3]" at Optometer.vhd(644)
+Info (10041): Inferred latch for "col_r[4]" at Optometer.vhd(644)
+Info (10041): Inferred latch for "col_r[5]" at Optometer.vhd(644)
+Info (10041): Inferred latch for "col_r[6]" at Optometer.vhd(644)
+Info (10041): Inferred latch for "col_r[7]" at Optometer.vhd(644)
+Info (10041): Inferred latch for "digit[0]" at Optometer.vhd(644)
+Info (10041): Inferred latch for "digit[1]" at Optometer.vhd(644)
+Info (10041): Inferred latch for "digit[2]" at Optometer.vhd(644)
+Info (10041): Inferred latch for "digit[3]" at Optometer.vhd(644)
+Info (10041): Inferred latch for "digit[4]" at Optometer.vhd(644)
+Info (10041): Inferred latch for "digit[5]" at Optometer.vhd(644)
+Info (10041): Inferred latch for "digit[6]" at Optometer.vhd(644)
+Info (10041): Inferred latch for "digit[7]" at Optometer.vhd(644)
+Info (10041): Inferred latch for "cat[0]" at Optometer.vhd(644)
+Info (10041): Inferred latch for "cat[1]" at Optometer.vhd(644)
+Info (10041): Inferred latch for "cat[2]" at Optometer.vhd(644)
+Info (10041): Inferred latch for "cat[3]" at Optometer.vhd(644)
+Info (10041): Inferred latch for "cat[4]" at Optometer.vhd(644)
+Info (10041): Inferred latch for "cat[5]" at Optometer.vhd(644)
+Info (10041): Inferred latch for "cat[6]" at Optometer.vhd(644)
+Info (10041): Inferred latch for "cat[7]" at Optometer.vhd(644)
+Info (10018): Can't recognize finite state machine "curstate" because it has a complex reset state
+Info: Duplicate LATCH primitives merged into single LATCH primitive
+    Info: Duplicate LATCH primitive "col_r[6]$latch" merged with LATCH primitive "col_r[1]$latch"
+    Info: Duplicate LATCH primitive "col_r[4]$latch" merged with LATCH primitive "col_r[3]$latch"
+    Info: Duplicate LATCH primitive "digit[7]$latch" merged with LATCH primitive "digit[4]$latch"
+Warning: Latch col_r[1]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WideOr1
+Warning: Latch col_r[2]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WideOr2
+Warning: Latch col_r[3]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WideOr2
+Warning: Latch col_r[5]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WideOr2
+Warning: Latch cat[0]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WideOr4
+Warning: Latch cat[1]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WideOr4
+Warning: Latch cat[2]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WideOr0
+Warning: Latch cat[3]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WideOr4
+Warning: Latch cat[4]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WideOr4
+Warning: Latch cat[5]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WideOr4
+Warning: Latch cat[6]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WideOr4
+Warning: Latch cat[7]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WideOr4
+Warning: Latch digit[0]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WideOr0
+Warning: Latch digit[1]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WideOr0
+Warning: Latch digit[2]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WideOr0
+Warning: Latch digit[3]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WideOr0
+Warning: Latch digit[4]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WideOr0
+Warning: Latch digit[5]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WideOr0
+Warning: Latch digit[6]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WideOr0
+Warning: Output pins are stuck at VCC or GND
+    Warning (13410): Pin "kbcol[3]" is stuck at VCC
+    Warning (13410): Pin "col_g[0]" is stuck at GND
+    Warning (13410): Pin "col_g[7]" is stuck at GND
+    Warning (13410): Pin "col_r[0]" is stuck at GND
+    Warning (13410): Pin "col_r[7]" is stuck at GND
+Info: Implemented 729 device resources after synthesis - the final resource count might be different
+    Info: Implemented 6 input pins
+    Info: Implemented 49 output pins
+    Info: Implemented 674 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 48 warnings
+    Info: Peak virtual memory: 245 megabytes
+    Info: Processing ended: Tue Nov 07 20:09:48 2017
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:05
+
+

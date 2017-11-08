@@ -1,0 +1,11 @@
+Fitter Status : Successful - Tue Nov 07 20:09:51 2017
+Quartus II Version : 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition
+Revision Name : Optometer
+Top-level Entity Name : Optometer
+Family : MAX II
+Device : EPM1270T144C5
+Timing Models : Final
+Total logic elements : 661 / 1,270 ( 52 % )
+Total pins : 55 / 116 ( 47 % )
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )
